@@ -16,7 +16,9 @@ export const meta: MetaFunction = () => ({
 });
 
 export const loader: LoaderFunction = args => {
-  throw json({ data: 'data from root/loader'})
+  const serverRuntimeVersion = require("@remix-run/server-runtime/package.json").version;
+  const message = 'data from root/loader';
+  throw json({serverRuntimeVersion, message})
 }
 
 export function CatchBoundary() {

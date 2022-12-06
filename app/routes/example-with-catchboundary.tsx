@@ -2,7 +2,9 @@ import {json, LoaderFunction} from "@remix-run/node";
 import {useCatch, useLoaderData} from "@remix-run/react";
 
 export const loader: LoaderFunction = args => {
-  throw json({data: 'data from example-with-catchboundary/loader'})
+  const serverRuntimeVersion = require("@remix-run/server-runtime/package.json").version;
+  const message = 'data from example-with-catchboundary/loader';
+  throw json({serverRuntimeVersion, message})
 }
 
 export function CatchBoundary() {
