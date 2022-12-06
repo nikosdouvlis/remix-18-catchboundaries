@@ -125,7 +125,9 @@ var import_react2 = require("@remix-run/react"), import_node2 = require("@remix-
   charset: "utf-8",
   title: "New Remix App",
   viewport: "width=device-width,initial-scale=1"
-}), loader = (args) => (0, import_node2.json)({ data: "data from root/loader" });
+}), loader = (args) => {
+  throw (0, import_node2.json)({ data: "data from root/loader" });
+};
 function CatchBoundary() {
   let caught = (0, import_react2.useCatch)();
   return /* @__PURE__ */ (0, import_jsx_dev_runtime2.jsxDEV)("div", {
@@ -399,7 +401,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { version: "f622b491", entry: { module: "/build/entry.client-VGC73OVB.js", imports: ["/build/_shared/chunk-FJ2GNP7Q.js", "/build/_shared/chunk-FOXTB3PS.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-YBOASIZP.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/example-with-catchboundary": { id: "routes/example-with-catchboundary", parentId: "root", path: "example-with-catchboundary", index: void 0, caseSensitive: void 0, module: "/build/routes/example-with-catchboundary-OUU4ND3I.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/example-without-catchboundary": { id: "routes/example-without-catchboundary", parentId: "root", path: "example-without-catchboundary", index: void 0, caseSensitive: void 0, module: "/build/routes/example-without-catchboundary-NQK62COF.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-N57WNQZP.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-F622B491.js" };
+var assets_manifest_default = { version: "4d2655d5", entry: { module: "/build/entry.client-VGC73OVB.js", imports: ["/build/_shared/chunk-FJ2GNP7Q.js", "/build/_shared/chunk-FOXTB3PS.js"] }, routes: { root: { id: "root", parentId: void 0, path: "", index: void 0, caseSensitive: void 0, module: "/build/root-RSOW2KRX.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/example-with-catchboundary": { id: "routes/example-with-catchboundary", parentId: "root", path: "example-with-catchboundary", index: void 0, caseSensitive: void 0, module: "/build/routes/example-with-catchboundary-OUU4ND3I.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !0, hasErrorBoundary: !1 }, "routes/example-without-catchboundary": { id: "routes/example-without-catchboundary", parentId: "root", path: "example-without-catchboundary", index: void 0, caseSensitive: void 0, module: "/build/routes/example-without-catchboundary-NQK62COF.js", imports: void 0, hasAction: !1, hasLoader: !0, hasCatchBoundary: !1, hasErrorBoundary: !1 }, "routes/index": { id: "routes/index", parentId: "root", path: void 0, index: !0, caseSensitive: void 0, module: "/build/routes/index-N57WNQZP.js", imports: void 0, hasAction: !1, hasLoader: !1, hasCatchBoundary: !1, hasErrorBoundary: !1 } }, url: "/build/manifest-4D2655D5.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var assetsBuildDirectory = "public/build", future = { v2_meta: !1 }, publicPath = "/build/", entry = { module: entry_server_exports }, routes = {

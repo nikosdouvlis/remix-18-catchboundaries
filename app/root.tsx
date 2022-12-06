@@ -16,7 +16,21 @@ export const meta: MetaFunction = () => ({
 });
 
 export const loader: LoaderFunction = args => {
-  return json({ data: 'data from root/loader'})
+  throw json({ data: 'data from root/loader'})
+}
+
+export function CatchBoundary() {
+  const caught = useCatch();
+
+  return (
+    <div>
+      <h1>Root CatchBoundary Caught</h1>
+      <p>Status: {caught.status}</p>
+      <pre>
+        <code>{JSON.stringify(caught.data, null, 2)}</code>
+      </pre>
+    </div>
+  );
 }
 
 export default function App() {
