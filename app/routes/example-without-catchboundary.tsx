@@ -1,11 +1,12 @@
+import {useLoaderData} from "@remix-run/react";
 import {json, LoaderFunction} from "@remix-run/node";
-import {useCatch, useLoaderData} from "@remix-run/react";
 
 export const loader: LoaderFunction = args => {
   const serverRuntimeVersion = require("@remix-run/server-runtime/package.json").version;
   const message = 'data from example-without-catchboundary/loader';
   throw json({serverRuntimeVersion, message})
 }
+
 export default function Example() {
   const data = useLoaderData();
   console.log(data)

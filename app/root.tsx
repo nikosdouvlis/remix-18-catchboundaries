@@ -7,7 +7,7 @@ import {
   Scripts,
   ScrollRestoration, useCatch, useLoaderData,
 } from "@remix-run/react";
-import {json} from "@remix-run/node";
+import {json} from "@remix-run/node/";
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -41,16 +41,16 @@ export default function App() {
 
   return (
     <html lang="en">
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body style={{ border: '1px solid green', padding: '1rem' }}>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
+    <head>
+      <Meta/>
+      <Links/>
+    </head>
+    <body style={{border: '1px solid green', padding: '1rem'}}>
+    <Outlet/>
+    <ScrollRestoration/>
+    <Scripts/>
+    <LiveReload/>
+    </body>
     </html>
   );
 }
